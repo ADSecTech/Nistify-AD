@@ -1,0 +1,9 @@
+Installation:
+https://docs.microsoft.com/en-us/windows/win32/secmgmt/installing-and-registering-a-password-filter-dll
+
+1. Requires to be installed on all domain controllers in a domain to ensure coverage of domain accounts 
+2. Can also be installed on local systems to require strong local passwords. 
+
+Programming:
+https://docs.microsoft.com/en-us/windows/win32/secmgmt/password-filter-programming-considerations
+https://docs.microsoft.com/en-us/windows/win32/secmgmt/management-functions#password-filter-functions
