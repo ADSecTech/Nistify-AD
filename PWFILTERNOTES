@@ -7,3 +7,10 @@ https://docs.microsoft.com/en-us/windows/win32/secmgmt/installing-and-registerin
 Programming:
 https://docs.microsoft.com/en-us/windows/win32/secmgmt/password-filter-programming-considerations
 https://docs.microsoft.com/en-us/windows/win32/secmgmt/management-functions#password-filter-functions
+
+Example DLLs:
+https://github.com/improsec/ImprosecPasswordFilter
+https://github.com/jephthai/OpenPasswordFilter
+https://www.blackhillsinfosec.com/the-creddefense-toolkit/
+https://github.com/CredDefense/CredDefense
+https://github.com/hosom/svalinn

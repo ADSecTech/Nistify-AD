@@ -1,0 +1,31 @@
+DLL Main:
+- Pull configuration from the registry
+- Contain the code to log erros to the registry
+- Export PSAM_PASSWORD_FILTER_ROUTINE PsamPasswordFilterRoutine
+    - Create thread (that can be killed if exceeds timeout) that will
+        - Validate password length
+        - Read API location key from registry
+        - Obtain API request value
+        - Make API request
+        - Validate password w/ API response
+        - Return True / False
+      - Clear thread memory
+      - Return result of thread
+- Export PSAM_PASSWORD_NOTIFICATION_ROUTINE PsamPasswordNotificationRoutine
+    - Return True // I dont think this is required
+- Export PSAM_INIT_NOTIFICATION_ROUTINE PsamInitNotificationRoutine
+    - Validate functions s/a networking, crypto, ...
+    - Return True if all functions function
+    - Return False if a function fails test
+
+
+networking: 
+- Valid HTTPS connection code
+- Valid HTTPS get code
+- API processing code
+
+pwchecking:
+- Check if passwords are over 8 characters
+- Check if password in list provided by argument
+- Compute SHA1 of provided passwords
+    - Switch for truncated response (5 chars for API request)

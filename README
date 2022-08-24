@@ -5,7 +5,13 @@ NIST SP 800-63B Password Requirements:
 - At least 8 Characters
 - Does not appear on a blacklist
 
-This project produces a DLL file that can be loaded onto domain controllers which
+Credits:
+Uses WinReg v6.1.0
+Stephen Hosoms Svalinn project was referenced heavily for this project. While not copied wholesale, 
+he attempts something similar and made this project much easier to implement with his as a guide. 
+Uses smallsha1 from Micael Hildenborg
+
+This project produces a DLL file that can be loaded onto domain controllers and workstations which
 implement the latest NIST guidance for known secret authentication. It requires 
 a minimum of 8 characters and that the password not be in a list of already 
 compromised passwords. The guidance also no longer includes a password rotation 
@@ -18,12 +24,12 @@ to implmenent. This project ONLY forces new passwords to comply with the NIST gu
 By default, it ties into the Have I Been Pwned database and connects to their
 systems to validate the password. The whole scheme is encrypted and the whole
 password hash is not submitted to the service, rather the first 5 characters of
-the hash are submitted, to which the server responds with a buffered list of hashes
+the hash are submitted, to which the server responds with a list of hashes
 that it knows in its database. From there, the known hashes are processed locally
 and if the user-supplied password hash is in the list of the known passwords provided
 by the service, it will reject the password and have the user choose a new one. 
 
-Beyond the in-built encryption, hashing, k-anonymitiy, and buffering features, 
+Beyond the in-built encryption, hashing, and k-anonymitiy features, 
 should a password return a hit, it will be rejected by the system, reducing 
 the security footprint of sending even the first 5 characters of a password hash
 through the internet via HTTPS. You can read more about the system from the creator 
@@ -31,6 +37,7 @@ himself. https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/
 
 This project seeks to bring the advanced password checking capabilities to the
 on-prem Microsoft enviroment. 
+
 
 NIST Guidance
 https://pages.nist.gov/800-63-3/
