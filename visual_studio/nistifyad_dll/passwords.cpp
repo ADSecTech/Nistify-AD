@@ -1,5 +1,7 @@
 #include "custom_headers.h"
 
+#include "pch.h"
+
 // Returns true if the proposed password meets the minimum length (8 chars) and is not
 // in api_results
 bool checkPassword(string proposed_password, string password_hash, string* api_results)

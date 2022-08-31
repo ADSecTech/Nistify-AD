@@ -1,5 +1,7 @@
 #include "custom_headers.h"
 
+#include "pch.h"
+
 void accessApi(LPCWSTR api, LPCWSTR resource, string* results)
 {
     DWORD dwSize = 0;

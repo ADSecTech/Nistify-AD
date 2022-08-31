@@ -24,6 +24,12 @@
     <ClInclude Include="custom_headers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="sha1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WinReg.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -32,10 +38,19 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="networking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pwchecking.cpp">
+    <ClCompile Include="passwords.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sha1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

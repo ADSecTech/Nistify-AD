@@ -1,5 +1,7 @@
 #include "custom_headers.h"
 
+#include "pch.h"
+
 // Read the configuration from the registry
 void readConfig(Config* conf)
 {

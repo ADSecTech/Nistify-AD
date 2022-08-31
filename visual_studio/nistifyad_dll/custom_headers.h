@@ -14,6 +14,8 @@ using std::cout;
 using std::wcout;
 using std::endl;
 
+// DLL things
+
 // Crypto
 // Uses smallsha1 - https://code.google.com/archive/p/smallsha1/
 #include "sha1.h"

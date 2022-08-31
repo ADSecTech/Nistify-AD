@@ -1,5 +1,7 @@
 #include "custom_headers.h"
 
+#include "pch.h"
+
 // Takes in the plain text and then places the hexedecimal representation in hashhex
 void getHash(string plaintext, string *hashhex)
 {
