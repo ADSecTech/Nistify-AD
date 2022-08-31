@@ -1,4 +1,5 @@
 TODO:
-1. Re-write the test project to use the pointer to the provided password everywhere so I can call the secure memory function on it in only one place
-2. Write DLL export sections
-3. Provide for logging to the event viewer. 
+1. Run updated code from test project and verify success. 
+2. Move updated code from test project back to the main project
+3. Write DLL export sections
+4. Provide for logging to the event viewer. 
