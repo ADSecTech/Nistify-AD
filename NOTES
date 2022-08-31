@@ -1,0 +1,4 @@
+TODO:
+1. Re-write the test project to use the pointer to the provided password everywhere so I can call the secure memory function on it in only one place
+2. Write DLL export sections
+3. Provide for logging to the event viewer. 
