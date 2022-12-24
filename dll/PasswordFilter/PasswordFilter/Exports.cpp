@@ -24,3 +24,8 @@ extern "C" __declspec(dllexport) BOOLEAN __stdcall PasswordFilter(
 {
 	return TRUE;
 }
+
+extern "C" __declspec(dllexport) void __stdcall Test()
+{
+	tests();
+}

@@ -23,3 +23,5 @@ extern "C" __declspec(dllexport) BOOLEAN __stdcall PasswordFilter(
 	PUNICODE_STRING FullName,
 	PUNICODE_STRING Password,
 	BOOLEAN SetOperation);
+
+extern "C" __declspec(dllexport) void __stdcall Test();
