@@ -6,8 +6,23 @@
 #include "Exports.h"
 
 int main()
-{
-    std::cout << "Hello World!\n";
+{   
+    if (InitializeChangeNotify() == TRUE)
+        std::cout << "InitializeChangeNotify is working as expected." << std::endl;
+    else
+        std::cout << "InitializeChangeNotify is not working." << std::endl;
+    
+    if (PasswordChangeNotify(0, 0, 0) == 0)
+        std::cout << "PasswordChangeNotify is working as expected." << std::endl;
+    else
+        std::cout << "PasswordChangeNotify is not working." << std::endl;
+
+    if (PasswordFilter(0, 0, 0, 0) == TRUE)
+        std::cout << "PasswordFilter is working as expected." << std::endl;
+    else
+        std::cout << "PasswordFilter is not working." << std::endl;
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
