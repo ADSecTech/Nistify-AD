@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "Exports.h"
+
 int main()
 {
     std::cout << "Hello World!\n";
