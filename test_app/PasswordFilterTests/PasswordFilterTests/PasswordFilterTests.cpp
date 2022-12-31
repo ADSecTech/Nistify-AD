@@ -7,6 +7,13 @@
 
 int main()
 {   
+    std::cout << "[-] Executing DLL test suite." << std::endl;
+
+    // Exported test function from the DLL. 
+    Test();
+
+    std::cout << std::endl << "[-] Testing exported functions." << std::endl;
+
     if (InitializeChangeNotify() == TRUE)
         std::cout << "[*] InitializeChangeNotify is working as expected." << std::endl;
     else
@@ -17,12 +24,12 @@ int main()
     else
         std::cout << "[!] PasswordChangeNotify is not working." << std::endl;
 
+    // TODO: Currently, the exported PasswordFilter function returns True.
+    //       It needs to run through the check process and return an intelligent value. 
     if (PasswordFilter(0, 0, 0, 0) == TRUE)
         std::cout << "[*] PasswordFilter is imported as expected." << std::endl;
     else
         std::cout << "[!] PasswordFilter is not working." << std::endl;
-
-    Test();
 
     return 0;
 }
