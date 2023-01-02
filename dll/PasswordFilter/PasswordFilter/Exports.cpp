@@ -28,7 +28,17 @@ extern "C" __declspec(dllexport) BOOLEAN __stdcall PasswordFilter(
 
 	// Convert password to hash
 	string hash;
-	getHash(&Password, &hash); // TODO: Convert PUNICODE_STRING to string
+	getHash(&Password, &hash);
+	// TODO: Convert PUNICODE_STRING to string
+	// So far, I've seen two ways to do this. 
+	// 1. By converting the *UNICODE_STRING to a ANSI_STRING and using RtlUnicodeStringToAnsiString()
+	//    to convert it into an ANSI_STRING and then using the <var>.c_str() method to convert it into
+	//    a c style string and feed it into the std::string constructor. 
+	// 2. Following the information here: http://www.flounder.com/cstring.htm#UNICODE_STRING
+	//
+	// I think number 1 is te best option as it uses built in functions that are locale aware
+	// for the conversion rather than building something that might break when unanticipated input
+	// is provided.
 
 	// Create API call
 	// See tests() if you want to understand why
