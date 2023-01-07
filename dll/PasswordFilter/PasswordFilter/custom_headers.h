@@ -7,6 +7,7 @@
 #include <exception>
 #include <vector>
 #include <NTSecAPI.h>
+#include <stringapiset.h>
 
 using std::string;
 using std::wstring;
